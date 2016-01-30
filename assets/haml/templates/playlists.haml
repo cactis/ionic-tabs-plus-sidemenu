@@ -1,0 +1,5 @@
+%ion-view{"view-title" => "Playlists"}
+  %ion-content
+    %ion-list
+      %ion-item{:href => "#/app/playlists/{{playlist.id}}", "ng-repeat" => "playlist in playlists"}
+        {{playlist.title}}

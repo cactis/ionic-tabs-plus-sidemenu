@@ -1,0 +1,28 @@
+%ion-side-menus{"enable-menu-with-back-views" => "false"}
+  %ion-side-menu-content
+    %ion-nav-bar.bar-stable
+      %ion-nav-back-button
+      %ion-nav-buttons{:side => "left"}
+        %button.button.button-icon.button-clear.ion-navicon{"menu-toggle" => "left"}
+    / TABS
+    %ion-tabs
+      %ion-tab{:href => "#/app/search", "icon-off" => "ion-search", "icon-on" => "ion-search", :title => "Search"}
+        %ion-nav-view{:name => "tab-search"}
+      %ion-tab{:href => "#/app/browse", "icon-off" => "ion-ios-glasses", "icon-on" => "ion-ios-glasses", :title => "Browse"}
+        %ion-nav-view{:name => "tab-browse"}
+      %ion-tab{:href => "#/app/playlists", "icon-off" => "ion-ipod", "icon-on" => "ion-ipod", :title => "Playlist"}
+        %ion-nav-view{:name => "tab-playlists"}
+  / Side Menu (left)
+  %ion-side-menu{:side => "left"}
+    %ion-header-bar.bar-stable
+      %h1.title Left
+    %ion-content
+      %ion-list
+        %ion-item{"menu-close" => "", "ng-click" => "login()"}
+          Login
+        %ion-item{:href => "#/app/search", "menu-close" => ""}
+          Search
+        %ion-item{:href => "#/app/browse", "menu-close" => ""}
+          Browse
+        %ion-item{:href => "#/app/playlists", "menu-close" => ""}
+          Playlists
